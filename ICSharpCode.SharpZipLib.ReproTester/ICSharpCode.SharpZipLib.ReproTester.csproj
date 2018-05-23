@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>netcoreapp2.0</TargetFramework>
+		<ApplicationIcon />
+		<StartupObject />
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Folder Include="Properties\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\src\ICSharpCode.SharpZipLib\ICSharpCode.SharpZipLib.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Repros\Samples\Repro118\aaa16.zip">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Repros\Samples\Repro204\test.tar.gz">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>
