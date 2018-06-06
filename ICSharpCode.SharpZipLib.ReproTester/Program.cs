@@ -16,6 +16,9 @@ namespace ICSharpCode.SharpZipLib.ReproTester
 			Console.WriteLine(Console.Title);
 			Console.WriteLine();
 
+			ConsoleTimeWriter.HookConsole();
+			ConsoleTimeWriter.HookTrace();
+
 			Run<Repro213>();
 			Run<Repro204>();
 			//Run<Repro118>();
@@ -31,11 +34,12 @@ namespace ICSharpCode.SharpZipLib.ReproTester
 			TRepro repro = null;
 			try
 			{
+				Console.ForegroundColor = ConsoleColor.Cyan;
 				Console.WriteLine($"[{name}] Preparing...");
-				Console.ForegroundColor = ConsoleColor.White;
+				Console.ForegroundColor = ConsoleColor.Gray;
 				repro = new TRepro();
 
-				Console.ForegroundColor = ConsoleColor.Gray;
+				Console.ForegroundColor = ConsoleColor.Cyan;
 				Console.WriteLine($"[{name}] Running...");
 				Console.ForegroundColor = ConsoleColor.White;
 				repro.Run();
@@ -58,9 +62,11 @@ namespace ICSharpCode.SharpZipLib.ReproTester
 			}
 			finally
 			{
-				Console.ForegroundColor = ConsoleColor.Gray;
+				Console.ForegroundColor = ConsoleColor.Cyan;
 				Console.WriteLine($"[{name}] Cleaning up...");
+				Console.ForegroundColor = ConsoleColor.White;
 				repro?.Cleanup();
+				Console.ForegroundColor = ConsoleColor.Cyan;
 				Console.WriteLine($"[{name}] Done!\n");
 			}
 		}
