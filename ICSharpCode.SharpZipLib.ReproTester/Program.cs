@@ -19,8 +19,9 @@ namespace ICSharpCode.SharpZipLib.ReproTester
 			ConsoleTimeWriter.HookConsole();
 			ConsoleTimeWriter.HookTrace();
 
-			Run<Repro213>();
-			Run<Repro204>();
+			Run<Repro218>();
+			//Run<Repro213>();
+			//Run<Repro204>();
 			//Run<Repro118>();
 			//Run<Repro208>();
 

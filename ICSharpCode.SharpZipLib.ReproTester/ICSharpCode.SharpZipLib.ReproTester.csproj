@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>netcoreapp2.0</TargetFramework>
+		<TargetFrameworks>netcoreapp2.0;net471</TargetFrameworks>
 		<ApplicationIcon />
 		<StartupObject />
 	</PropertyGroup>
@@ -20,6 +20,12 @@
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
 	  <None Update="Repros\Samples\Repro204\test.tar.gz">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Repros\Samples\Repro218\_GameMeshTri1_color.blob">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Repros\Samples\Repro218\_GameMeshTri1_color.png">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>
