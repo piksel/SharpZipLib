@@ -6,6 +6,7 @@ using System.Reflection;
 
 namespace ICSharpCode.SharpZipLib.ReproTester
 {
+	[Timeout(minutes: 5)]
 	internal abstract class Repro
 	{
 		private string workPath;
@@ -16,8 +17,8 @@ namespace ICSharpCode.SharpZipLib.ReproTester
 
 		protected Repro()
 		{
-			workPath = Path.Combine(Path.GetTempPath(),
-				$"SharpZipRepro_{GetType().Name}_{DateTime.UtcNow.Ticks:x16}");
+
+			workPath = Path.Combine(Program.WorkRoot, $"{GetType().Name}_{DateTime.UtcNow.Ticks:x16}");
 			if (Directory.Exists(workPath))
 				Directory.Delete(workPath, true);
 
@@ -146,5 +147,15 @@ namespace ICSharpCode.SharpZipLib.ReproTester
 			Directory.CreateDirectory(dir);
 			return dir;
 		}
+	}
+
+	[AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
+	class TimeoutAttribute: Attribute
+	{
+		private TimeSpan timeOut;
+		public TimeSpan TimeOut => timeOut;
+
+		public TimeoutAttribute(int minutes = 0, int seconds = 0)
+			=> this.timeOut = new TimeSpan(0, minutes, seconds);
 	}
 }
