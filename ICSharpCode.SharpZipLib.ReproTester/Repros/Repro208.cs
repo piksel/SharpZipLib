@@ -52,17 +52,19 @@ namespace ICSharpCode.SharpZipLib.ReproTester.Repros
 			}
 
 			var bytes = MakeTarGzipArchive(inputFiles);
-			Console.WriteLine("Result bytes: ");
+			var sb = new StringBuilder();
+			sb.Append("Result bytes:\n");
 			foreach (var b in bytes)
-				Console.Write(b.ToString("x2") + " ");
+				sb.AppendFormat("{0:x2}", b).Append(" ");
+			Console.WriteLine(sb.ToString());
 
 			var outputFile = GetOutput("tar");
 			Console.WriteLine($"Writing output to \"{outputFile}\"...");
 
 			File.WriteAllBytes(outputFile, bytes);
 
-			Console.WriteLine("Working directory will be cleaned, verify output contents and press any key to continue...");
-			Console.ReadKey();
+			//Console.WriteLine("Working directory will be cleaned, verify output contents and press any key to continue...");
+			//Console.ReadKey();
 
 			Console.WriteLine();
 		}

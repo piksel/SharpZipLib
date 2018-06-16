@@ -10,6 +10,7 @@ using ICSharpCode.SharpZipLib.BZip2;
 
 namespace ICSharpCode.SharpZipLib.ReproTester.Repros
 {
+	[Timeout(minutes: 2)]
 	internal class Repro218 : Repro
 	{
 		string inputFileA, inputFileB;
