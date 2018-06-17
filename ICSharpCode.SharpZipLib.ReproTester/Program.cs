@@ -142,7 +142,11 @@ namespace ICSharpCode.SharpZipLib.ReproTester
 				}
 
 				if (threadException != null)
+<<<<<<< HEAD
 					ExceptionDispatchInfo.Capture(threadException).Throw();
+=======
+					throw threadException;
+>>>>>>> 93110a6da8474088cbfcb04b7d7e8ff8c1a63639
 
 				reproLog.Write("No unhandled exceptions were caught.", ConsoleColor.Green).End();
 				return true;
