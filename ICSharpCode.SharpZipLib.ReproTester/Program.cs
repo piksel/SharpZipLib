@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.ExceptionServices;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -141,7 +142,7 @@ namespace ICSharpCode.SharpZipLib.ReproTester
 				}
 
 				if (threadException != null)
-					throw threadException;
+					ExceptionDispatchInfo.Capture(threadException).Throw();
 
 				reproLog.Write("No unhandled exceptions were caught.", ConsoleColor.Green).End();
 				return true;
