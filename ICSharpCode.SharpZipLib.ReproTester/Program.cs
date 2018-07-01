@@ -50,8 +50,10 @@ namespace ICSharpCode.SharpZipLib.ReproTester
 
 			mainLogger = ConsoleWriter.Prefixed("[Main] ", ConsoleColor.Yellow);
 
+			Logging.LogProvider.SetCurrentLogProvider(new ReproTestLogProvider());
+
 			workRoot = Path.Combine(Path.GetTempPath(), "SharpZipRepro");
-			if(Directory.Exists(workRoot))
+			if (Directory.Exists(workRoot))
 			{
 				mainLogger.Write("Cleaning work directory from previous tests... ");
 				Directory.Delete(workRoot, true);
@@ -148,11 +150,8 @@ namespace ICSharpCode.SharpZipLib.ReproTester
 				}
 
 				if (threadException != null)
-<<<<<<< HEAD
 					ExceptionDispatchInfo.Capture(threadException).Throw();
-=======
-					throw threadException;
->>>>>>> 93110a6da8474088cbfcb04b7d7e8ff8c1a63639
+
 
 				reproLog.Write("No unhandled exceptions were caught.", ConsoleColor.Green).End();
 				return true;

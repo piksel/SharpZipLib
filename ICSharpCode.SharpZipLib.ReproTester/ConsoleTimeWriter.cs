@@ -198,6 +198,7 @@ namespace ICSharpCode.SharpZipLib.ReproTester
 
 			Console.WriteLine();
 		}
+
 	}
 
 	internal class PrefixedConsoleWriter
