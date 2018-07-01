@@ -19,6 +19,24 @@ namespace ICSharpCode.SharpZipLib.ReproTester
 
 		static void Main()
 		{
+			Setup();
+
+			//Run<Repro229>();
+			//Run<Repro218>();
+			//Run<Repro213>();
+			//Run<Repro204>();
+			//Run<Repro118>();
+			//Run<Repro208>();
+			Run<Repro121>();
+
+			//RunAll();
+
+			Console.Write("Press any key to exit... ");
+			Console.ReadKey();
+		}
+
+		private static void Setup()
+		{
 			Console.Title = "SharpZipLib Repro Tester";
 			Console.ForegroundColor = ConsoleColor.White;
 			Console.WriteLine(Console.Title);
@@ -41,18 +59,6 @@ namespace ICSharpCode.SharpZipLib.ReproTester
 			}
 
 			Directory.CreateDirectory(workRoot);
-
-			Run<Repro229>();
-			//Run<Repro218>();
-			//Run<Repro213>();
-			//Run<Repro204>();
-			//Run<Repro118>();
-			//Run<Repro208>();
-
-			//RunAll();
-
-			Console.Write("Press any key to exit... ");
-			Console.ReadKey();
 		}
 
 		private static void RunAll()

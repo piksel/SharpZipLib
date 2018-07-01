@@ -19,6 +19,36 @@
 	  <None Update="Repros\Samples\Repro118\aaa16.zip">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
+	  <None Update="Repros\Samples\Repro121\lftest-gnu.tar">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Repros\Samples\Repro121\lftest-oldgnu.tar">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Repros\Samples\Repro121\lftest-posix.tar">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Repros\Samples\Repro121\lftest-ustar.tar">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Repros\Samples\Repro121\lftest-v7.tar">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Repros\Samples\Repro121\utf8test-gnu.tar">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Repros\Samples\Repro121\utf8test-oldgnu.tar">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Repros\Samples\Repro121\utf8test-posix.tar">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Repros\Samples\Repro121\utf8test-ustar.tar">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="Repros\Samples\Repro121\utf8test-v7.tar">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	  <None Update="Repros\Samples\Repro204\test.tar.gz">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
