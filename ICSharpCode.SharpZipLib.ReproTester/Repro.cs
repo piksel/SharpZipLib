@@ -7,7 +7,7 @@ using System.Reflection;
 namespace ICSharpCode.SharpZipLib.ReproTester
 {
 	[Timeout(minutes: 5)]
-	internal abstract class Repro
+	public abstract class Repro
 	{
 		private string workPath;
 		private uint inputCount = 0;
